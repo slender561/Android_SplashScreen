@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.felipe.splashscreen.Calculadora;
+import com.felipe.splashscreen.ListaIntegrantes;
 import com.felipe.splashscreen.R;
 
 /**
@@ -29,7 +31,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        switch(position) {
+            case 0:
+                return new ListaIntegrantes();
+            case 1:
+                return new Calculadora();
+            default:
+                return new PlaceholderFragment();
+        }
     }
 
     @Nullable
