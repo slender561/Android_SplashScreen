@@ -70,6 +70,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/calcularBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calcular"
