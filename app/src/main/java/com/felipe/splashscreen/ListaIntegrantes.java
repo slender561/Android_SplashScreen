@@ -3,10 +3,14 @@ package com.felipe.splashscreen;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +62,19 @@ public class ListaIntegrantes extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lista_integrantes, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_lista_integrantes, container, false);
+        ArrayList<Students> list = new ArrayList<>();
+        list.add(new Students("Vinicius Santana", R.drawable.vini, "https://github.com/VinciPy", "00209374"));
+        list.add(new Students("Lucas Eduardo", R.drawable.lucas, "https://github.com/Tronaluz", "00209374"));
+        list.add(new Students("Felipe Takata", R.drawable.felipe, "https://github.com/slender561", "00209374"));
+        list.add(new Students("Gustavo Milani ", R.drawable.gustavo, "https://github.com/GMilaniMota", "00209589"));
+        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.recycler);
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(llm);
+        Adapter adapter = new Adapter(list);
+        rv.setAdapter(adapter);
+        rv.setHasFixedSize(true);
+        return rootView;
     }
+
 }
