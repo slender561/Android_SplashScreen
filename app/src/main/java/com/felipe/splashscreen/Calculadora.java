@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,6 +57,34 @@ public class Calculadora extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        TextInputEditText nota1 = getActivity().findViewById(R.id.firstNote);
+        TextInputEditText nota2 = getActivity().findViewById(R.id.secondNote);
+        TextInputEditText nota3 = getActivity().findViewById(R.id.thirdNote);
+        TextInputEditText nota4 = getActivity().findViewById(R.id.fourNote);
+
+        Button btn = getActivity().findViewById(R.id.calcularBtn);
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Float n1 = Float.parseFloat(String.valueOf(nota1.getText()));
+                Float n2 = Float.parseFloat(String.valueOf(nota2.getText()));
+                Float n3 = Float.parseFloat(String.valueOf(nota3.getText()));
+                Float n4 = Float.parseFloat(String.valueOf(nota4.getText()));
+
+                Float media = (n1 + n2 + n3 + n4) / 4;
+
+                if (media < 4) {
+                    // Reprovado
+                } else if (media >= 4 && media < 6){
+                    // Recuperação
+                } else {
+                    // Aprovado
+                }
+            }
+        });
+
     }
 
     @Override
