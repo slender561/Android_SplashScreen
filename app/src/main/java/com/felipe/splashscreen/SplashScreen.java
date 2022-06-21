@@ -6,7 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class splashscreen extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
@@ -20,7 +20,7 @@ public class splashscreen extends AppCompatActivity {
     }
 
     private void MainActivity(){
-        Intent intent = new Intent(splashscreen.this, MainActivity.class);
+        Intent intent = new Intent(SplashScreen.this, MainActivity.class);
         startActivity(intent);
         finish();
     }

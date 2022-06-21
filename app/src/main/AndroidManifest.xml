@@ -14,7 +14,7 @@
         android:theme="@style/Theme.SplashScreen"
         tools:targetApi="31">
         <activity
-            android:name=".Detalhes_Integrantes"
+            android:name=".DetalhesIntegrantes"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -22,7 +22,7 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
         <activity
-            android:name=".splashscreen"
+            android:name=".SplashScreen"
             android:exported="true"
             android:label="@string/SplashScreen"
             android:noHistory="true"

@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Detalhes_Integrantes extends AppCompatActivity {
+public class DetalhesIntegrantes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

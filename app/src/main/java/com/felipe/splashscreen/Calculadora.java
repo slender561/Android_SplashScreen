@@ -61,39 +61,28 @@ public class Calculadora extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_calculadora, container, false);
-
         TextInputEditText nota1 = view.findViewById(R.id.firstNote);
         TextInputEditText nota2 = view.findViewById(R.id.secondNote);
         TextInputEditText nota3 = view.findViewById(R.id.thirdNote);
         TextInputEditText nota4 = view.findViewById(R.id.fourNote);
-
         Button btn = view.findViewById(R.id.calcularBtn);
-
-
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 FrameLayout rootlayout = (FrameLayout) view.findViewById(R.id.frameLayout);
                 String message = "";
                 int duration = Snackbar.LENGTH_LONG;
-
                 Float n1 = Float.parseFloat(String.valueOf(nota1.getText()));
                 Float n2 = Float.parseFloat(String.valueOf(nota2.getText()));
                 Float n3 = Float.parseFloat(String.valueOf(nota3.getText()));
                 Float n4 = Float.parseFloat(String.valueOf(nota4.getText()));
-
                 Float media = (n1 + n2 + n3 + n4) / 4;
-
                 String mediaString = Float.toString(media);
-
                 if (media < 4) {
                     message = "Aluno Reprovado. Média: " + mediaString;
                 } else if (media >= 4 && media < 6){
@@ -101,12 +90,10 @@ public class Calculadora extends Fragment {
                 } else {
                     message = "Aluno Aprovado. Média: " + mediaString;
                 }
-
                 Snackbar snackbar = Snackbar.make(rootlayout, message, duration);
                 snackbar.show();
             }
         });
-
         return view;
     }
 }
