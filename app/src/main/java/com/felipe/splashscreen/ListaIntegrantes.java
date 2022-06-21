@@ -65,8 +65,8 @@ public class ListaIntegrantes extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_lista_integrantes, container, false);
         ArrayList<Students> list = new ArrayList<>();
         list.add(new Students("Vinicius Santana", R.drawable.vini, "https://github.com/VinciPy", "00209374"));
-        list.add(new Students("Lucas Eduardo", R.drawable.lucas, "https://github.com/Tronaluz", "00209374"));
-        list.add(new Students("Felipe Takata", R.drawable.felipe, "https://github.com/slender561", "00209374"));
+        list.add(new Students("Lucas Eduardo", R.drawable.lucas, "https://github.com/Tronaluz", "00210694"));
+        list.add(new Students("Felipe Takata", R.drawable.felipe, "https://github.com/slender561", "00200705"));
         list.add(new Students("Gustavo Milani ", R.drawable.gustavo, "https://github.com/GMilaniMota", "00209589"));
         RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.recycler);
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
