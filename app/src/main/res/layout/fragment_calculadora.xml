@@ -74,7 +74,15 @@
             android:id="@+id/calcularBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular"
+            android:text="@string/calcular"
+            >
+        </Button>
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/limpar"
+            android:backgroundTint="@color/purple_700"
             >
         </Button>
     </LinearLayout>

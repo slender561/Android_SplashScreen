@@ -94,6 +94,16 @@ public class Calculadora extends Fragment {
                 snackbar.show();
             }
         });
+        Button reset = view.findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nota1.setText("");
+                nota2.setText("");
+                nota3.setText("");
+                nota4.setText("");
+            }
+        });
         return view;
     }
 }

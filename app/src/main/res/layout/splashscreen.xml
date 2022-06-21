@@ -10,7 +10,4 @@
         android:layout_height="match_parent"
         android:src="@drawable/anubis">
     </ImageView>
-
-
-
 </LinearLayout>

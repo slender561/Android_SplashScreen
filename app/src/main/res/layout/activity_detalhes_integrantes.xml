@@ -37,6 +37,17 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:text="alguma coisa" />
+
+        <TextView
+            android:layout_marginTop="39dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/github"
+            android:autoLink="web"
+            android:textColor="@color/blue"
+            android:textSize="20dp"
+            android:text="GITHUB"
+            />
     </LinearLayout>
 
 </RelativeLayout>

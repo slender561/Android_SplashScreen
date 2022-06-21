@@ -29,4 +29,5 @@
         android:textSize="19sp"
         android:padding="9dp"
         android:textColor="@color/black"/>
+
 </com.google.android.material.card.MaterialCardView>

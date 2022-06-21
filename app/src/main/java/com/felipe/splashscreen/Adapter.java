@@ -2,6 +2,7 @@ package com.felipe.splashscreen;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 intent.putExtra("image", Integer.toString(list.get(position).image));
                 intent.putExtra("name", list.get(position).name);
                 intent.putExtra("RA", list.get(position).RA);
+                intent.putExtra("github", list.get(position).github);
                 v.getContext().startActivity(intent);
             }
         });
@@ -55,6 +57,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         TextView name;
         ImageView image;
         TextView RA;
+        TextView github;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.name);

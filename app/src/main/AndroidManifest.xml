@@ -22,7 +22,7 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.SplashScreen.NoActionBar"></activity>
         <activity
-            android:name=".SplashScreen"
+            android:name=".splashscreen"
             android:exported="true"
             android:label="@string/SplashScreen"
             android:noHistory="true"
